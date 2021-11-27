@@ -17,13 +17,13 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <!-- Шапка сайта -->
+    <!----------------------- Шапка сайта -------------------------->
     <header class="header">
         <div class="container header-container">
         <nav class="header-navigation">
             <a class="header-logo link" href=""><span class="header-logo-web" >Web</span>Studio</a>
     <ul class="header-list list">
-        <li class="header-item">
+        <li class="header-item current">
             <a class="header-link link current" href="">Студия</a>
         </li>
         <li class="header-item">
@@ -54,13 +54,15 @@
         </ul>
     </div>
     </header>
-    <!-- Герой -->
+    <!------------------------Герой ----------------------->
     <main>
         <section class="hero hero-container">
             <h1 class="hero-title hero">Эффективные решения для вашего бизнеса</h1>
-            <button class="hero-btn pointer" type="button">Заказать услугу</button>
+            <button class="hero-btn pointer" type="button" data-modal-open>
+                Заказать услугу
+            </button>
         </section>
-        <!-- Достоинства -->
+        <!--------------------- Достоинства -------------------------->
         <section class="hidden">
             <div class="container">
             <h2 hidden class="visually-hidden">нашы достоинства</h2>
@@ -124,7 +126,7 @@
             </ul>
             </div>
         </section>
-        <!-- Чем мы занимаемся -->
+        <!-------------------- Чем мы занимаемся -------------------->
         <section class="gallery">
             <div class="container">
             <h2 class="gallery-title">
@@ -132,12 +134,13 @@
             </h2>
                 <ul class="list gallery-list">
                     <li class="gallery-item">
-                        <img
+                        <img 
                             src="./imagies/img.work1.jpg" 
                             alt="написание кода" 
                             width="370" 
                             height="294"
                         />
+                            <p class="gallery-text">Десктопные приложения</p>
                     </li>
                     <li class="gallery-item">
                         <img
@@ -146,19 +149,21 @@
                             width="370" 
                             height="294"
                         />
+                        <p class="gallery-text">Мобильные приложения</p>
                     </li>
                     <li class="gallery-item">
-                        <img
+                        <img 
                             src="./imagies/img.work3.jpg" 
                             alt="программа для планшета" 
                             width="370" 
                             height="294"
                         />
+                        <p class="gallery-text">Дизайнерские решения</p>
                     </li>
                 </ul>
                 </div>
         </section>
-        <!-- Команда -->
+        <!--------------------- Команда ----------------------------->
         <section class="masters">
                 <div class="container">
             <h2 class="masters-title">Наша команда</h2>
@@ -331,7 +336,7 @@
 </ul>
 </div>
         </section>
-        <!-- Постоянные клиенты -->
+        <!-------------------- Постоянные клиенты ---------------------->
         <section class="clients">
             <div class="container">
             <h2 class="clients-title">Постоянные клиенты</h2>
@@ -382,7 +387,7 @@
             </div>
         </section>
     </main>
-    <!-- Подвал сайта -->
+    <!------------------------- Подвал сайта --------------------------------->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-box-left">
@@ -411,7 +416,7 @@
     </address>
     </div>
 
-    <!-- Правый контейнер -->
+    <!------------------------ Правый контейнер ------------------------>
 
     <div class="footer-box-right">
         <p class="footer-right-title">присоединяйтесь</p>
@@ -447,5 +452,18 @@
     </div>
     </div>
     </footer>
+ 
+    <!--------------------------------- Backdrop ------------------------------------>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close" data-modal-close>
+                <svg class="modal-close-icon" height="11" width="11">
+                    <use href="./imagies/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+<script src="./js/modal.js"></script>
 </body>
 </html>
